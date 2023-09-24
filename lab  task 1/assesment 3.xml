@@ -1,23 +1,40 @@
 <officeinfo>
     <person sr="1">
-    <id>1</id>
-    <name>john</name>
-    <address>H#,R#3,Banani,dhaka</address>
-    <department> sales</department>
-    <selary>$20000</selary>
+        <id>1</id>
+        <name>john</name>
+            <address>
+                <house>H#38</house>
+                <road>R#3</road>
+                <area>Banani</area>
+                 <city>dhaka</city>
+            </address>    
+        <department> sales</department>
+        <selary>$20000</selary>
     </person>
      <person sr="2">
-    <id>2</id>
-    <name>mark zukarberg</name>
-    <address>flat# A/1, H#20,R#18,mirpur,dhaka</address>
-    <department> accounts</department>
-    <selary>$12000</selary>
+        <id>2</id>
+        <name>mark zukarberg</name>
+                <address>
+                    <flat>#A/1</flat>
+                    <house>H#20</house>
+                    <road>R#18</road>
+                    <area>mirpur</area> 
+                    <city>dhaka</city>
+                </address>
+        <department> accounts</department>
+        <selary>$12000</selary>
     </person>
      <person sr="3">
-    <id>3</id>
-    <name>ala voski</name>
-    <address>H#38,R#3,motijheel,dhaka</address>
-    <department>Human Resource</department>
-    <selary>$30000</selary>
+            <id>3</id>
+            <name>ala voski</name>
+            <address>H#38,R#3,motijheel,dhaka</address>
+                    <address>
+                        <house>H#38</house>
+                        <road>R#3</road>
+                        <area>motijheel</area> 
+                        <city>dhaka</city>
+                    </address>
+            <department>Human Resource</department>
+            <selary>$30000</selary>
     </person>
 </officeinfo>
