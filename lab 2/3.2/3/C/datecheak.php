@@ -14,7 +14,7 @@ if(isset($_REQUEST['dob'])){
 </head>
 <body>
 
-    <form method="post" action="handler_page.php" enctype="">
+    <form method="post" action="#" enctype="">
         <fieldset>
          <legend>Date of Birth:</legend> 
          dd    mm     yyyy  <br/>

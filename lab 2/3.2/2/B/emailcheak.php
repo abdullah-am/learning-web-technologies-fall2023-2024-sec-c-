@@ -8,11 +8,12 @@ if(isset($_REQUEST['email'])){
     <title>email</title>
 </head>
 <body>
-    <form method="post" action="emailcheak.php" enctype="">
-        email:<br>
-        <input type="email" name="email" value="<?php if(isset($email)){echo $email;}?>" /><br>
-        <input type="submit" name="submit" value="submit" />
-
+    <form method="post" action="#" enctype="">
+        <fieldset>
+            <legend>Email:</legend>
+           <input type="email" name="email" value="<?php if(isset($email)){echo $email;}?>" /><input type="button" name="" value="i" /><br><hr>
+            <input type="submit" name="submit" value="submit" />
+        </fieldset>
     </form>
 </body>
 </html>
