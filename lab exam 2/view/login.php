@@ -4,7 +4,7 @@
     <title>LOG IN</title>
 </head>
 <body>
-    <form method="post" action="" enctype="">
+    <form method="post" action="../controller/logincheck.php" enctype="">
         <table border="0" align="center" width="1080px">
 
             <!-- top bar -->
@@ -15,7 +15,7 @@
                             <td align="center">
                                 <h4><a href="../index.php">Home</a> |
                                 <a href="login.php">Login</a> |
-                                <a href="registration.php">Registration</a></h4>
+                                <a href="regist.php">Registration</a></h4>
                             </td>
                         </tr>
                     </table>

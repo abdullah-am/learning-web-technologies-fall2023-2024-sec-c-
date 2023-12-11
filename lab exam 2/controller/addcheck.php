@@ -6,7 +6,6 @@
     $username =$_REQUEST['username'];
     $password =$_REQUEST['password'];
     $usertype=$_REQUEST['usertype'];
-    $confirmpassword =$_REQUEST['confirmpassword'];
     $gender =$_REQUEST['gender'];
     
     
@@ -23,12 +22,10 @@
     }
 
 
-if($name == " " || $email == " " || $username==" " || $password == " " || $confirmpassword == " " || $gender == " "){
+if($name == " " || $email == " " || $username==" " || $password == " " || $gender == " "){
     echo "null user input";
- }else if($password != $confirmpassword){
-    echo "pass not match";
  }
- else if($password==ispassvalid($password) && $password==$confirmpassword){
+ else if($password==ispassvalid($password)){
 
    $user=[
             'name'=>$name,
@@ -36,20 +33,20 @@ if($name == " " || $email == " " || $username==" " || $password == " " || $confi
             'username'=>$username,
             'password'=>$password,
             'usertype'=>$usertype,
-            'confirmpassword'=>$confirmPassword,
             'gender'=>$gender,
          ];
 
     $_SESSION['user']=$user;
-    $status=registration($name,$username,$password,$usertype,$email,$gender);
+    $status=getadd($name,$username,$password,$usertype,$email,$gender);
     if($status){
-      header('location:../view/login.php');
+      header('location:../view/viewstudent.php');
     } else{
       echo"invalid user!";
     }
-    
-    echo "password incorrect";  
+     
        
-}
+}else{
+    echo "password incorrect";
+  }
 
 ?>

@@ -4,7 +4,7 @@
     <title>Registration</title>
 </head>
 <body>
-    <form method="post" action="" enctype="">
+    <form method="post" action="../controller/registcheck.php" enctype="">
         <table border="0" align="center" width="1080px">
 
             <!-- top bar -->
@@ -37,6 +37,10 @@
                         <input type="password" name="password" value="" required><br><br>
                         Confirm Password:&emsp;
                         <input type="password" name="confirmpassword" value="" required><br><br>
+                        <fieldset>
+                            <legend>User Type</legend>
+                            <input type="radio" name="usertype" value="student" required> student
+                        </fieldset><br>
                         <fieldset>
                             <legend>Gender</legend>
                             <input type="radio" name="gender" value="Male" required> Male

@@ -1,5 +1,10 @@
 <?php
-   // require_once('../controller/sessionCheak.php');
+  require_once('../controller/session.php');
+
+  require_once('../model/userModel.php');
+
+   $data=getId($_SESSION['id']);
+       $username=$data['username'];
 ?>
 
 
@@ -19,8 +24,8 @@
                     <table width="100%">
                         <tr>
                             <td align="center">
-                                <h4><a>Home</a> | 
-								 logged as <a></a>|
+                               <h4><a href="../index.php">Home</a> | 
+								 logged as <a> <?php echo $username;?> </a>|
 								<a href="../controller/logout.php">log out</a></h4>
                             </td>
                            
@@ -44,6 +49,7 @@
 							<ul>
 							<li><a href="addstudent.php">Add student</a></li>
                             <li><a href="viewstudent.php">View student</a></li>
+                            <li><a href="addcourse.php">Add course</a></li>
 							</ul>
 						</td>
 

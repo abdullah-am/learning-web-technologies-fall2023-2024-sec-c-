@@ -1,16 +1,16 @@
 <?php
-   require_once('../controller/session.php');
+  require_once('../controller/session.php');
 
-   require_once('../model/userModel.php');
- 
-    $data=getId($_SESSION['id']);
-        $username=$data['username'];
+  require_once('../model/userModel.php');
+
+   $data=getId($_SESSION['id']);
+       $username=$data['username'];
 ?>
 
 
 <html lang="en">
 <head>
-    <title>STUDENT HOME</title>
+    <title>ADMIN HOME</title>
 </head>
 <body>
     <form>
@@ -44,15 +44,28 @@
 			  <td>
 				<table border="1"   cellpadding="0" cellspacing="0" width="100%">
 					<tr>
-						<td width="25%">STUDENT DASHBOARD<hr>
+						<td width="25%">admin dashboard<hr>
 
 							<ul>
-                            <li><a href="profile.php">profile</a></li>
-							<li><a href="viewcourse.php">view courses</a></li>
+							<li><a href="addstudent.php">Add student</a></li>
+                            <li><a href="viewstudent.php">View student</a></li>
+                            <li><a href="addcourse.php">Add course</a></li>
 							</ul>
 						</td>
 
-						<td><h3>welcome student page</h3></td>
+						<td>
+                            <fieldset>
+                            <legend>Registration</legend>
+                            Name:&emsp;
+                            <input type="text" name="name" value="" required><br><br>
+                            Email:&emsp;
+                            <input type="email" name="email" value="" required><br><br>
+                            Username:&emsp;
+                            <input type="text" name="username" value="" required><br><br>
+                            <input type="submit" name="submit" value="Submit">
+                            <input type="reset" name="reset" value="Reset">
+                        </fieldset>
+                        </td>
 
 					</tr>
 

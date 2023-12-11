@@ -18,10 +18,10 @@
             }
         }
 
-    function registration($name,$username,$password,$usertype,$email,$dob,$gender)
+    function registration($name,$username,$password,$usertype,$email,$gender)
         {
             $con=getConnection();
-            $sql="insert into users(name,username,password,usertype,email,dob,gender)values('$name','$username','$password','$usertype','$email','$dob','$gender')";
+            $sql="insert into users(name,username,password,usertype,email,gender)values('$name','$username','$password','$usertype','$email','$gender')";
             if(mysqli_query($con,$sql)){
                 return true;
             }else{
@@ -55,5 +55,41 @@
                 return null;
             }
         }
+
+        function getAllUser()
+        {
+            $con = getConnection();
+            $sql = "select * from users";
+            $result = mysqli_query($con, $sql);
+            $users = [];
+            while ($row = mysqli_fetch_assoc($result)) {
+                array_push($users, $row);
+            }
+
+            return $users;
+        }
+
+        function getadd($name,$username,$password,$usertype,$email,$gender)
+        {
+            $con=getConnection();
+            $sql="insert into users(name,username,password,usertype,email,gender)values('$name','$username','$password','$usertype','$email','$gender')";
+            if(mysqli_query($con,$sql)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        function getaddcourse($course,$detail)
+        {
+            $con=getConnection();
+            $sql="insert into course(course,detail)values('$course','$detail')";
+            if(mysqli_query($con,$sql)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
 
 ?>
